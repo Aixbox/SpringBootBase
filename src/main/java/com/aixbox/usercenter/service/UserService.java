@@ -58,7 +58,15 @@ public interface UserService extends IService<User> {
 
     Boolean isAdmin(User loginUser);
 
-    int updateUser(User user, User loginUser);
+    int updateUser(User user, User loginUser, HttpServletRequest request);
 
     User getCurrentUser(HttpServletRequest request);
+
+    /**
+     *获取最匹配的用户
+     * @param num
+     * @param currentUser
+     * @return
+     */
+    List<User> matchUsers(long num, User currentUser);
 }

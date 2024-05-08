@@ -1,22 +1,22 @@
-package com.aixbox.usercenter.model.domain;
+package com.aixbox.usercenter.model.VO;
 
-import com.baomidou.mybatisplus.annotation.*;
+import com.baomidou.mybatisplus.annotation.TableLogic;
 import lombok.Data;
 
 import java.io.Serializable;
-import java.util.Date;
 
 /**
- * 用户
- * @TableName user
+ * @author 魔王Aixbox
+ * @version 1.0
  */
-@TableName(value ="user")
 @Data
-public class User implements Serializable {
+public class UserVO implements Serializable {
+
+
+
     /**
      * id
      */
-    @TableId(type = IdType.AUTO)
     private Long id;
 
     /**
@@ -40,14 +40,11 @@ public class User implements Serializable {
     private Integer gender;
 
     /**
-     * 密码
-     */
-    private String userPassword;
-
-    /**
-     * 电话
+     * 电话号码
      */
     private String phone;
+
+
 
     /**
      * 邮箱
@@ -69,11 +66,7 @@ public class User implements Serializable {
      */
     private String updateTime;
 
-    /**
-     * 是否删除
-     */
-    @TableLogic
-    private Integer isDelete;
+
 
     /**
      * 用户角色， 普通用户 - 0  ，管理员 - 1
@@ -90,6 +83,9 @@ public class User implements Serializable {
      */
     private String profile;
 
-    @TableField(exist = false)
-    private static final long serialVersionUID = 1L;
+
+
+
+
+
 }

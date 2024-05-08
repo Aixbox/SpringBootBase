@@ -1,6 +1,5 @@
 package com.aixbox.usercenter.common;
 
-import com.baomidou.mybatisplus.extension.api.R;
 import lombok.Data;
 
 import java.io.Serializable;
